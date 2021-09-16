@@ -99,13 +99,26 @@
         window.location.href = link;
     }
     </script> -->
-    <form action="https://formsubmit.co/pyaemyat.cumgy@gmail.com" method="POST">
+
+
+
+    <!-- <form action="https://formsubmit.co/pyaemyat.cumgy@gmail.com" method="POST">
         <input type="hidden" name="_subject" value="My testing new email!">
         <input type="email" name="email" required placeholder="Email address">
         <input type="hidden" name="_next" value="https://pyae2812.github.io/thanks.html">
         <input type="text" name="message" required placeholder="Write your email">
         <input type="file" name="attachment" accept="image/png, image/jpeg file/pdf">
         <button type="submit">Send</button>
-   </form>
+   </form> -->
+
+
+   <form action="MAILTO:pyaemyat.cumgy@gmail.com" method="POST" enctype="text/plain">
+        <label for="user">Username</label><br>
+        <input type="text" name="user" required placeholder="Write your email"><br>
+        <label for="mail">Email</label><br>
+        <input type="email" name="mail" required placeholder="Write your email"><br>
+        <input type="submit" value="Send">
+        <input type="reset" value="Reset">
+    </form>
 </body>
 </html>
