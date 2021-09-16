@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .row {
+            zoom: 1; 
+            max-width: 1024px;
+            margin: 0 auto;
+        }
+        .row:before,
+        .row:after {
+            content:"";
+            display:table;
+        }
+        .col {
+            display: block;
+            float:left;
+            margin: 1% 0 1% 1.6%;
+        }
+        .col:first-child { 
+            margin-left: 0; 
+        }
+        .row:after {
+            clear:both;
+        }
+        @media only screen and (max-width: 480px) {
+            .col { 
+            /*margin: 1% 0 1% 0%;*/
+                margin: 0;
+            }
+            .span-1{
+                width: 100%;
+            }
+            .span-2{
+                width: 100%;
+            }
+        }
+        /* ====================================================================== */
+        .span-1{
+            width: 32.26%;
+        }
+        .span-2{
+            width: 66.13%;
+        }
+        input[type=email]{
+            width: 100%;
+            padding: 7px;
+            border: 1px solid #616060;
+            border-radius: 3px;
+        }
+        .form-content{
+            width: 50%;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" class="form-content">
+        <div class="row">
+            <div class="col span-1">
+                <label for="email">Email</label>
+            </div>
+            <div class="col span-2">
+                <input type="email" id="email" placeholder="Your email">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col span-1">
+                <label for="file">File</label>
+            </div>
+            <div class="col span-2">
+                <input type="file" id="file">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col span-1">
+                <label for="">&nbsp;</label>
+            </div>
+            <div class="col span-2">
+                <button onclick="sendMail(); return false">Send</button>
+            </div>
+        </div>
+    </form>  
+    <!-- <textarea id="myText">
+        Lorem ipsum...
+    </textarea>
+    <button onclick="sendMail(); return false">Send</button> -->
+    <script>
+        function sendMail() {
+        var link = "mailto:pyaemyat.cumgy@gmail.com"
+             + "&subject=" + encodeURIComponent("This is my manuscript")
+             + "&body=" + encodeURIComponent(document.getElementById('file').value)
+        ;
+        window.location.href = link;
+    }
+    </script>
+</body>
+</html>
