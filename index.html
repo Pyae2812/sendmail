@@ -112,13 +112,20 @@
    </form> -->
 
 
-   <form action="MAILTO:pyaemyat.cumgy@gmail.com" method="POST" enctype="text/plain">
-        <label for="user">Username</label><br>
-        <input type="text" name="user" required placeholder="Write your email"><br>
-        <label for="mail">Email</label><br>
-        <input type="email" name="mail" required placeholder="Write your email"><br>
-        <input type="submit" value="Send">
-        <input type="reset" value="Reset">
+   <form id="fr1">
+        <input type="text" id="tb1" />
+        <input type="text" id="tb2" />
+        <input type="button" id="bt1" value="click" />
     </form>
+    <script>
+        $(document).ready(function() {
+        $('#bt1').click(function() {
+            $('#fr1').attr('action',
+                        'mailto:pyaemyat.cumgy@gmail.com?subject=' +
+                        $('#tb1').val() + '&body=' + $('#tb2').val());
+            $('#fr1').submit();
+        });
+    });
+    </script>
 </body>
 </html>
