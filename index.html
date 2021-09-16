@@ -64,7 +64,7 @@
     </style>
 </head>
 <body>
-    <form action="#" class="form-content">
+    <!-- <form action="#" class="form-content">
         <div class="row">
             <div class="col span-1">
                 <label for="email">Email</label>
@@ -90,10 +90,6 @@
             </div>
         </div>
     </form>  
-    <!-- <textarea id="myText">
-        Lorem ipsum...
-    </textarea>
-    <button onclick="sendMail(); return false">Send</button> -->
     <script>
         function sendMail() {
         var link = "mailto:pyaemyat.cumgy@gmail.com"
@@ -102,6 +98,13 @@
         ;
         window.location.href = link;
     }
-    </script>
+    </script> -->
+    <form action="https://formsubmit.co/pyaemyat.cumgy@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="My testing new email!">
+        <input type="email" name="email" required placeholder="Email address">
+        <input type="hidden" name="_next" value="https://pyae2812.github.io/thanks.html">
+        <input type="text" name="message" required placeholder="Write your email">
+        <button type="submit">Send</button>
+   </form>
 </body>
 </html>
