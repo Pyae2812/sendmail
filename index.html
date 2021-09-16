@@ -112,20 +112,15 @@
    </form> -->
 
 
-   <form id="fr1">
-        <input type="text" id="tb1" />
-        <input type="text" id="tb2" />
-        <input type="button" id="bt1" value="click" />
-    </form>
-    <script>
-        $(document).ready(function() {
-        $('#bt1').click(function() {
-            $('#fr1').attr('action',
-                        'mailto:pyaemyat.cumgy@gmail.com?subject=' +
-                        $('#tb1').val() + '&body=' + $('#tb2').val());
-            $('#fr1').submit();
-        });
-    });
+   <form method="post" action="mailto:williampyae282@gmai.com" enctype="multipart/form-data">
+    <div>
+      <label for="file">Choose a file</label>
+      <input type="file" id="file" name="myFile">
+    </div>
+    <div>
+      <button>Send the file</button>
+    </div>
+  </form>
     </script>
 </body>
 </html>
